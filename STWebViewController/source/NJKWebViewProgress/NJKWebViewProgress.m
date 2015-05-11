@@ -80,9 +80,6 @@ const float NJKFinalProgressValue = 0.9f;
     }
     
     BOOL ret = YES;
-    if ([_webViewProxyDelegate respondsToSelector:@selector(webView:shouldStartLoadWithRequest:navigationType:)]) {
-        ret = [_webViewProxyDelegate webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
-    }
     
     BOOL isFragmentJump = NO;
     if (request.URL.fragment) {
@@ -97,25 +94,26 @@ const float NJKFinalProgressValue = 0.9f;
         _currentURL = request.URL;
         [self reset];
     }
+    
+    self.isFinishLoad = NO;
+    if ([_webViewProxyDelegate respondsToSelector:@selector(webView:shouldStartLoadWithRequest:navigationType:)]) {
+        ret = [_webViewProxyDelegate webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
+    }
+    
     return ret;
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
+    _loadingCount++;
+    _maxLoadCount = fmax(_maxLoadCount, _loadingCount);
+    
+    [self startProgress];
     if ([_webViewProxyDelegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
         [_webViewProxyDelegate webViewDidStartLoad:webView];
     }
-
-    _loadingCount++;
-    _maxLoadCount = fmax(_maxLoadCount, _loadingCount);
-
-    [self startProgress];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    if ([_webViewProxyDelegate respondsToSelector:@selector(webViewDidFinishLoad:)]) {
-        [_webViewProxyDelegate webViewDidFinishLoad:webView];
-    }
-    
     _loadingCount--;
     [self incrementProgress];
     
@@ -132,7 +130,13 @@ const float NJKFinalProgressValue = 0.9f;
     BOOL complete = [readyState isEqualToString:@"complete"];
     if (complete && isNotRedirect) {
         [self completeProgress];
+        self.isFinishLoad = YES;
     }
+    
+    if ([_webViewProxyDelegate respondsToSelector:@selector(webViewDidFinishLoad:)]) {
+        [_webViewProxyDelegate webViewDidFinishLoad:webView];
+    }
+    
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {

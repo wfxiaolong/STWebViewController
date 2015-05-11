@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "STWebViewController.h"
+#import "SVWebViewController.h"
 
-#define URLSTRING @"http://m.red.jd.com/sg4jdapp/index.html?sid=4ad2a6ab713f074651dad250fef1a5af"
+//#define URLSTRING @"http://m.red.jd.com/sg4jdapp/index.html?sid=4ad2a6ab713f074651dad250fef1a5af"
+#define URLSTRING @"http://www.baidu.com"
+
 
 @interface ViewController ()
 
@@ -37,7 +39,7 @@
 }
 
 - (void)btnClick:(id)sender {
-    STWebViewController *webC = [[STWebViewController alloc] initWithAddress:URLSTRING];
+    SVWebViewController *webC = [[SVWebViewController alloc] initWithAddress:URLSTRING];
     [self.navigationController pushViewController:webC animated:YES];
 }
 

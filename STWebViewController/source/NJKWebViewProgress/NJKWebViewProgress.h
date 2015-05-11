@@ -16,6 +16,8 @@ extern const float NJKFinalProgressValue;
 @property (nonatomic, weak) id<UIWebViewDelegate>webViewProxyDelegate;
 @property (nonatomic, readonly) float progress; // 0.0..1.0
 
+@property (nonatomic, assign) BOOL isFinishLoad;
+
 @property (nonatomic, strong) NJKWebViewProgressView *progressView;
 
 - (void)reset;

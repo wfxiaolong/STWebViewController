@@ -8,11 +8,15 @@
 
 #### 3. add the gesture like "weixin" which can remove back by the pan gesture, and show with the screenshot
 
+#### 4. add the url cache from "MYUrlCache", but there is something error in the code.(will fix.)
+
+#### 5. finish the target...
+
+
 ### TODO List:
 
-###### 1. add the tag when the webView start load. When the webView load other web like "baidu.com" which can't load the "UIWebViewNavigationTypeLinkClicked" method.
+#### ***If you find something interesting, can also push a request for me. I will finish it in soon. **
 
-###### 2. It should add the webCache what can let the webView go back faster.
 
 ![](./demo.gif)
 

@@ -11,6 +11,9 @@
 #import "SVWebViewController.h"
 
 #import "NJKWebViewProgress.h"
+#import "MyURLCache.h"
+
+#import "STTools.h"
 
 #define DEBUGMODE 1
 #if DEBUGMODE
@@ -43,9 +46,11 @@ typedef NS_ENUM(NSInteger, ViewType) {
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) NSURLRequest *request;
 
-// screen shots
+/// status
+@property (nonatomic, assign) BOOL notNeedScreenShot;
+
+/// screen shots
 @property (nonatomic, strong) NSMutableArray *imgArray;
-@property (nonatomic, strong) UIImage *webScreenshotsImg;
 @property (nonatomic, strong) UIImage *backScreenshotsImg;
 @property (nonatomic, strong) UIView *showView;
 @property (nonatomic, strong) NJKWebViewProgress *progressProxy;
@@ -85,7 +90,7 @@ typedef NS_ENUM(NSInteger, ViewType) {
     [self.webView loadRequest:request];
 }
 
-#pragma mark - View lifecycle
+#pragma mark - View lifeCycle
 
 - (void)loadView {
     self.view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -98,18 +103,21 @@ typedef NS_ENUM(NSInteger, ViewType) {
     pangesture.delegate = self;
     [self.view addGestureRecognizer:pangesture];
     
-    /// set proxy
+    /// set proxy and progresssView
     self.progressProxy = [[NJKWebViewProgress alloc] init]; // instance variable
     self.webView.delegate = self.progressProxy;
     self.progressProxy.webViewProxyDelegate = self;
-    
-    /// set progresssView
     self.progressProxy.progressView.frame = CGRectMake(0, PROGRESSORIGNH-20, self.view.frame.size.width, PROGRESSHEIGHT);
+    
+    /// set url cache
+    MyURLCache *shareCache = [[MyURLCache alloc] initWithMemoryCapacity:1024*1024 diskCapacity:0 diskPath:nil];
+    [NSURLCache setSharedURLCache:shareCache];
     
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self updateToolbarItems];
 }
 
@@ -164,7 +172,7 @@ typedef NS_ENUM(NSInteger, ViewType) {
     return toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 }
 
-#pragma mark - Getters
+#pragma mark - Button Getters
 
 - (UIWebView*)webView {
     if(!_webView) {
@@ -306,12 +314,17 @@ typedef NS_ENUM(NSInteger, ViewType) {
         [self.delegate webViewDidFinishLoad:webView];
     }
     
+    if (self.progressProxy.isFinishLoad) {
+        self.notNeedScreenShot = NO;
+    }
+    
+    /// remove banner or other operate
     [self removeBanner:webView];
     [self performSelector:@selector(removeBanner:) withObject:webView afterDelay:0.5];
     [self performSelector:@selector(removeBanner:) withObject:webView afterDelay:1.5];
 }
 
-/// 取出广告
+/// 去除广告 (这里还可以做一些模拟点击等操作)
 - (void)removeBanner:(UIWebView*)webView {
     [webView stringByEvaluatingJavaScriptFromString:@"(function() { var taobaoLogo = document.getElementsByClassName(\"new-header new-header-append\");var len = taobaoLogo.length;for(var i = 0; i < len; i++) {taobaoLogo[i].parentNode.removeChild(taobaoLogo[i]);}}())"];
     [webView stringByEvaluatingJavaScriptFromString:@"(function() { var taobaoLogo = document.getElementById(\"down_app_header\"); if(taobaoLogo)taobaoLogo.parentNode.removeChild(taobaoLogo);}())"];
@@ -337,17 +350,25 @@ typedef NS_ENUM(NSInteger, ViewType) {
         return [self.delegate webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
     }
     
-    if (navigationType == UIWebViewNavigationTypeLinkClicked) {
-        SVWLog(@"UIWebViewNavigationTypeLinkClicked");
-        self.webScreenshotsImg = [self getScreenshot];
-        [self.imgArray addObject: self.webScreenshotsImg];
-    } else if (navigationType == UIWebViewNavigationTypeBackForward) {
-        SVWLog(@"UIWebViewNavigationTypeBackForward");
-    } else if (navigationType == UIWebViewNavigationTypeFormResubmitted) {
-        SVWLog(@"UIWebViewNavigationTypeFormResubmitted");
-    } else {
-        SVWLog(@"navigationType:%d", navigationType);
+    if (!self.progressProxy.isFinishLoad && !self.notNeedScreenShot && navigationType != UIWebViewNavigationTypeBackForward) {
+        /// add image
+        UIImage *webScreenshotsImg = [STTools getScreenshot];
+        [self.imgArray addObject:webScreenshotsImg];
+        self.notNeedScreenShot = YES;
     }
+    
+//    /// this method is just useful for jd websites
+//    if (navigationType == UIWebViewNavigationTypeLinkClicked) {
+//        SVWLog(@"UIWebViewNavigationTypeLinkClicked");
+//        UIImage *webScreenshotsImg = [STTools getScreenshot];
+//        [self.imgArray addObject: webScreenshotsImg];
+//    } else if (navigationType == UIWebViewNavigationTypeBackForward) {
+//        SVWLog(@"UIWebViewNavigationTypeBackForward");
+//    } else if (navigationType == UIWebViewNavigationTypeFormResubmitted) {
+//        SVWLog(@"UIWebViewNavigationTypeFormResubmitted");
+//    } else {
+//        SVWLog(@"navigationType:%ld", (long)navigationType);
+//    }
     
     return YES;
 }
@@ -364,9 +385,9 @@ typedef NS_ENUM(NSInteger, ViewType) {
 - (void)goForwardTapped:(UIBarButtonItem *)sender {
     [self.webView goForward];
     
-    // add image
-    self.webScreenshotsImg = [self getScreenshot];
-    [self.imgArray addObject: self.webScreenshotsImg];
+    /// add image
+    UIImage *webScreenshotsImg = [STTools getScreenshot];
+    [self.imgArray addObject:webScreenshotsImg];
 }
 
 - (void)reloadTapped:(UIBarButtonItem *)sender {
@@ -424,7 +445,7 @@ typedef NS_ENUM(NSInteger, ViewType) {
     
     if (UIGestureRecognizerStateBegan == pan.state) {
         SVWLog(@"gesture start...");
-        self.backScreenshotsImg = [self getScreenshot];
+        self.backScreenshotsImg = [STTools getScreenshot];
         [self setCustomShowView];
         if (self.webView.canGoBack) {
             _showView.hidden = NO;
@@ -502,32 +523,6 @@ typedef NS_ENUM(NSInteger, ViewType) {
         UIView *blackView = [_showView viewWithTag:BlackAlphaView];
         blackView.alpha = VIEWALPHA *(1 - x/leftView.frame.size.width);
     }
-}
-
-#pragma -mark get screen shot
-
-- (UIImage *)getScreenshot {
-    CGSize imageSize = [[UIScreen mainScreen] bounds].size;
-    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    for (UIWindow *window in [[UIApplication sharedApplication] windows]) {
-        if (![window respondsToSelector:@selector(screen)] || [window screen] == [UIScreen mainScreen]) {
-            CGContextSaveGState(context);
-            CGContextTranslateCTM(context, [window center].x, [window center].y);
-            CGContextConcatCTM(context, [window transform]);
-            CGContextTranslateCTM(context,
-                                  -[window bounds].size.width * [[window layer] anchorPoint].x,
-                                  -[window bounds].size.height * [[window layer] anchorPoint].y);
-            
-            [[window layer] renderInContext:context];
-            CGContextRestoreGState(context);
-        }
-    }
-    
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return image;
 }
 
 
