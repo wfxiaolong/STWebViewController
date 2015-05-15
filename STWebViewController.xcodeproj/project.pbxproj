@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		A83488A91B0096E3006BCC7E /* MyURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A83488A81B0096E3006BCC7E /* MyURLCache.m */; };
 		A83488AE1B009D12006BCC7E /* STTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A83488AD1B009D12006BCC7E /* STTools.m */; };
+		A85B423C1B05BAE000027DD4 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A85B423B1B05BAE000027DD4 /* TableViewController.m */; };
+		A85B42421B05BE8500027DD4 /* FVCustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A85B42411B05BE8500027DD4 /* FVCustomAlertView.m */; };
+		A85B42461B05BEB600027DD4 /* STAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A85B42451B05BEB600027DD4 /* STAlertView.m */; };
+		A85B42491B05D35700027DD4 /* PPWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A85B42481B05D35700027DD4 /* PPWebViewController.m */; };
+		A85B424D1B05D96000027DD4 /* NSEtcHosts.m in Sources */ = {isa = PBXBuildFile; fileRef = A85B424C1B05D96000027DD4 /* NSEtcHosts.m */; };
 		A8900AD81AEE19400005E645 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900AD71AEE19400005E645 /* main.m */; };
 		A8900ADB1AEE19400005E645 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900ADA1AEE19400005E645 /* AppDelegate.m */; };
 		A8900ADE1AEE19400005E645 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900ADD1AEE19400005E645 /* ViewController.m */; };
@@ -47,6 +52,17 @@
 		A83488A81B0096E3006BCC7E /* MyURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyURLCache.m; sourceTree = "<group>"; };
 		A83488AC1B009D12006BCC7E /* STTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTools.h; sourceTree = "<group>"; };
 		A83488AD1B009D12006BCC7E /* STTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTools.m; sourceTree = "<group>"; };
+		A85B423A1B05BAE000027DD4 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		A85B423B1B05BAE000027DD4 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		A85B423F1B05BE8500027DD4 /* FVCustomAlertView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FVCustomAlertView-Prefix.pch"; sourceTree = "<group>"; };
+		A85B42401B05BE8500027DD4 /* FVCustomAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FVCustomAlertView.h; sourceTree = "<group>"; };
+		A85B42411B05BE8500027DD4 /* FVCustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FVCustomAlertView.m; sourceTree = "<group>"; };
+		A85B42441B05BEB600027DD4 /* STAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAlertView.h; sourceTree = "<group>"; };
+		A85B42451B05BEB600027DD4 /* STAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAlertView.m; sourceTree = "<group>"; };
+		A85B42471B05D35700027DD4 /* PPWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPWebViewController.h; sourceTree = "<group>"; };
+		A85B42481B05D35700027DD4 /* PPWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPWebViewController.m; sourceTree = "<group>"; };
+		A85B424B1B05D96000027DD4 /* NSEtcHosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSEtcHosts.h; sourceTree = "<group>"; };
+		A85B424C1B05D96000027DD4 /* NSEtcHosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSEtcHosts.m; sourceTree = "<group>"; };
 		A8900AD21AEE19400005E645 /* STWebViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STWebViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8900AD61AEE19400005E645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8900AD71AEE19400005E645 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,6 +142,48 @@
 				A83488AD1B009D12006BCC7E /* STTools.m */,
 			);
 			name = tools;
+			path = source;
+			sourceTree = "<group>";
+		};
+		A85B423D1B05BB6900027DD4 /* PPEtcHosts */ = {
+			isa = PBXGroup;
+			children = (
+				A85B424A1B05D96000027DD4 /* Src */,
+				A85B423A1B05BAE000027DD4 /* TableViewController.h */,
+				A85B423B1B05BAE000027DD4 /* TableViewController.m */,
+				A85B42471B05D35700027DD4 /* PPWebViewController.h */,
+				A85B42481B05D35700027DD4 /* PPWebViewController.m */,
+			);
+			name = PPEtcHosts;
+			sourceTree = "<group>";
+		};
+		A85B423E1B05BE7500027DD4 /* thirdlib */ = {
+			isa = PBXGroup;
+			children = (
+				A85B42431B05BE8800027DD4 /* AlertView */,
+			);
+			name = thirdlib;
+			sourceTree = "<group>";
+		};
+		A85B42431B05BE8800027DD4 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				A85B423F1B05BE8500027DD4 /* FVCustomAlertView-Prefix.pch */,
+				A85B42401B05BE8500027DD4 /* FVCustomAlertView.h */,
+				A85B42411B05BE8500027DD4 /* FVCustomAlertView.m */,
+				A85B42441B05BEB600027DD4 /* STAlertView.h */,
+				A85B42451B05BEB600027DD4 /* STAlertView.m */,
+			);
+			name = AlertView;
+			sourceTree = "<group>";
+		};
+		A85B424A1B05D96000027DD4 /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				A85B424B1B05D96000027DD4 /* NSEtcHosts.h */,
+				A85B424C1B05D96000027DD4 /* NSEtcHosts.m */,
+			);
+			path = Src;
 			sourceTree = "<group>";
 		};
 		A8900AC91AEE19400005E645 = {
@@ -149,11 +207,14 @@
 		A8900AD41AEE19400005E645 /* STWebViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A83488AB1B009CFC006BCC7E /* tools */,
+				A85B423E1B05BE7500027DD4 /* thirdlib */,
 				A8900AFB1AEE198B0005E645 /* source */,
 				A8900AD91AEE19400005E645 /* AppDelegate.h */,
 				A8900ADA1AEE19400005E645 /* AppDelegate.m */,
 				A8900ADC1AEE19400005E645 /* ViewController.h */,
 				A8900ADD1AEE19400005E645 /* ViewController.m */,
+				A85B423D1B05BB6900027DD4 /* PPEtcHosts */,
 				A8900AE21AEE19400005E645 /* Images.xcassets */,
 				A8900AE41AEE19400005E645 /* LaunchScreen.xib */,
 				A8900AD51AEE19400005E645 /* Supporting Files */,
@@ -190,7 +251,6 @@
 		A8900AFB1AEE198B0005E645 /* source */ = {
 			isa = PBXGroup;
 			children = (
-				A83488AB1B009CFC006BCC7E /* tools */,
 				A83488A61B0096D0006BCC7E /* MyURLCache */,
 				A8900AFC1AEE198B0005E645 /* SVWebViewController.strings */,
 				A8900B041AEE198B0005E645 /* NJKWebViewProgress */,
@@ -370,12 +430,17 @@
 				A8900B211AEE198B0005E645 /* NJKWebViewProgress.m in Sources */,
 				A8900B221AEE198B0005E645 /* NJKWebViewProgressView.m in Sources */,
 				A8900ADE1AEE19400005E645 /* ViewController.m in Sources */,
+				A85B42461B05BEB600027DD4 /* STAlertView.m in Sources */,
+				A85B42421B05BE8500027DD4 /* FVCustomAlertView.m in Sources */,
 				A83488A91B0096E3006BCC7E /* MyURLCache.m in Sources */,
 				A8900ADB1AEE19400005E645 /* AppDelegate.m in Sources */,
 				A8900B231AEE198B0005E645 /* SVModalWebViewController.m in Sources */,
+				A85B423C1B05BAE000027DD4 /* TableViewController.m in Sources */,
 				A8900B2E1AEE198B0005E645 /* SVWebViewControllerActivity.m in Sources */,
+				A85B424D1B05D96000027DD4 /* NSEtcHosts.m in Sources */,
 				A8900AD81AEE19400005E645 /* main.m in Sources */,
 				A8900B251AEE198B0005E645 /* SVWebViewController.m in Sources */,
+				A85B42491B05D35700027DD4 /* PPWebViewController.m in Sources */,
 				A8900B281AEE198B0005E645 /* SVWebViewControllerActivityChrome.m in Sources */,
 				A8900B2C1AEE198B0005E645 /* SVWebViewControllerActivitySafari.m in Sources */,
 			);
