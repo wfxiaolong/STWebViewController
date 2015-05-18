@@ -14,6 +14,7 @@
 #import "MyURLCache.h"
 
 #import "STTools.h"
+#import "NSEtcHosts.h"
 
 #define DEBUGMODE 1
 #if DEBUGMODE
@@ -54,6 +55,8 @@ typedef NS_ENUM(NSInteger, ViewType) {
 @property (nonatomic, strong) UIImage *backScreenshotsImg;
 @property (nonatomic, strong) UIView *showView;
 @property (nonatomic, strong) NJKWebViewProgress *progressProxy;
+
+@property (nonatomic, strong) UIPanGestureRecognizer *panGesture;
 
 @end
 
@@ -104,7 +107,7 @@ typedef NS_ENUM(NSInteger, ViewType) {
     [self.view addGestureRecognizer:pangesture];
     
     /// set proxy and progresssView
-    self.progressProxy = [[NJKWebViewProgress alloc] init]; // instance variable
+    self.progressProxy = [[NJKWebViewProgress alloc] init];
     self.webView.delegate = self.progressProxy;
     self.progressProxy.webViewProxyDelegate = self;
     self.progressProxy.progressView.frame = CGRectMake(0, PROGRESSORIGNH-20, self.view.frame.size.width, PROGRESSHEIGHT);
@@ -317,6 +320,7 @@ typedef NS_ENUM(NSInteger, ViewType) {
     if (self.progressProxy.isFinishLoad) {
         self.notNeedScreenShot = NO;
     }
+
     
     /// remove banner or other operate
     [self removeBanner:webView];
@@ -346,6 +350,25 @@ typedef NS_ENUM(NSInteger, ViewType) {
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    
+    /// 内网翻墙专用的设置
+    BOOL headerIsPresent = [[request allHTTPHeaderFields] objectForKey:@"Host"]!=nil;
+    if(!headerIsPresent) {
+        __block NSMutableURLRequest *my_request = (NSMutableURLRequest*)request;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *host = request.URL.host;
+                NSDictionary *hostTable = [NSEtcHosts hostTable];
+                if (hostTable[host] == nil) {
+                } else {
+                    [my_request addValue:hostTable[host] forHTTPHeaderField:@"Host"];
+                    // reload the request
+                    [self loadRequest:my_request];
+                }
+            });
+        });
+    }
+    
     if ([self.delegate respondsToSelector:@selector(webView:shouldStartLoadWithRequest:navigationType:)]) {
         return [self.delegate webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
     }
@@ -356,19 +379,6 @@ typedef NS_ENUM(NSInteger, ViewType) {
         [self.imgArray addObject:webScreenshotsImg];
         self.notNeedScreenShot = YES;
     }
-    
-//    /// this method is just useful for jd websites
-//    if (navigationType == UIWebViewNavigationTypeLinkClicked) {
-//        SVWLog(@"UIWebViewNavigationTypeLinkClicked");
-//        UIImage *webScreenshotsImg = [STTools getScreenshot];
-//        [self.imgArray addObject: webScreenshotsImg];
-//    } else if (navigationType == UIWebViewNavigationTypeBackForward) {
-//        SVWLog(@"UIWebViewNavigationTypeBackForward");
-//    } else if (navigationType == UIWebViewNavigationTypeFormResubmitted) {
-//        SVWLog(@"UIWebViewNavigationTypeFormResubmitted");
-//    } else {
-//        SVWLog(@"navigationType:%ld", (long)navigationType);
-//    }
     
     return YES;
 }
@@ -432,6 +442,10 @@ typedef NS_ENUM(NSInteger, ViewType) {
 #pragma -mark set UIPangestureDelegate
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if ([touch locationInView:self.view].x > 40) {
+        return NO;
+    }
+    
     if ([self.webView canGoBack]) {
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
         return YES;

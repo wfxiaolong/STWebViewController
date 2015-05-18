@@ -16,7 +16,11 @@
 @interface NSEtcHosts : NSObject
 
 + (void)addHost:(NSString *)host ipAddress:(NSString *)ipAddress;
++ (NSDictionary*)hostTable;
++ (NSDictionary*)ipTable;
 
 @end
+
+
 
 #endif
