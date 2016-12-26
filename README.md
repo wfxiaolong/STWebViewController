@@ -11,6 +11,13 @@
 
 #### Usage:
 
+###### Download:
+
+1. Github: git clone https://github.com/wfxiaolong/STWebViewController.git
+2. pods.
+![](./pod_suc.png)
+3. Code:
+
 ```
 #import "STWebViewCOntroller.h"
 
@@ -18,9 +25,8 @@ STWebViewController *webC = [[STWebViewController alloc] initWithAddress:URLSTRI
 [self.navigationController pushViewController:webC animated:YES];
 ```
 
-
 #### The demo's result:
-
+<hr>
 
 ![](./demo.gif)
 
