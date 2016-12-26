@@ -1,24 +1,24 @@
-# STWebViewController
+## STWebViewController
 
-### Description:
+![](https://img.shields.io/teamcity/http/teamcity.jetbrains.com/s/bt345.svg) ![](https://img.shields.io/badge/pod-support-blue.svg) ![](https://img.shields.io/github/license/mashape/apistatus.svg)
 
-##### 1. add the progressView from "NJKWebViewProgress"
+#### Description:
 
-##### 2. add the webView layout from "SVWebViewController"
+* This Lib depands on 'NJKWebViewProgress'.
+* The important function is the swipe gesture.(Just like Wechat App does)
 
-##### 3. add the gesture like "weixin" which can remove back by the pan gesture, and show with the screenshot
+#### Usage:
 
-##### 4. add the url cache from "MYUrlCache", but there is something error in the code.(will fix.)
+```
+#import "STWebViewCOntroller.h"
 
-##### 5. finish the target...
+STWebViewController *webC = [[STWebViewController alloc] initWithAddress:URLSTRING];
+[self.navigationController pushViewController:webC animated:YES];
+```
 
-##### 6. add the local host setting for webView
-
-### TODO List:
-
-##### ***If you find something interesting, can also push a request for me. I will finish it in soon. **
-
-
+#### The demo's result:
 ![](./demo.gif)
 
+#### License
+STWebViewController is under MIT License. See LICENSE file for more info from <a href="https://opensource.org/licenses/mit-license.php">here</a>;
 

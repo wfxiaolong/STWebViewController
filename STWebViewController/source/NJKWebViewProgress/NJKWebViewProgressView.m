@@ -18,12 +18,6 @@
     return self;
 }
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    [self configureViews];
-}
-
 -(void)configureViews
 {
     self.userInteractionEnabled = NO;

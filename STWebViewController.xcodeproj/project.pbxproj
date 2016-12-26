@@ -7,34 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A83488A91B0096E3006BCC7E /* MyURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A83488A81B0096E3006BCC7E /* MyURLCache.m */; };
 		A83488AE1B009D12006BCC7E /* STTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A83488AD1B009D12006BCC7E /* STTools.m */; };
-		A85B423C1B05BAE000027DD4 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A85B423B1B05BAE000027DD4 /* TableViewController.m */; };
-		A85B42421B05BE8500027DD4 /* FVCustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A85B42411B05BE8500027DD4 /* FVCustomAlertView.m */; };
-		A85B42461B05BEB600027DD4 /* STAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A85B42451B05BEB600027DD4 /* STAlertView.m */; };
-		A85B42491B05D35700027DD4 /* PPWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A85B42481B05D35700027DD4 /* PPWebViewController.m */; };
-		A85B424D1B05D96000027DD4 /* NSEtcHosts.m in Sources */ = {isa = PBXBuildFile; fileRef = A85B424C1B05D96000027DD4 /* NSEtcHosts.m */; };
 		A8900AD81AEE19400005E645 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900AD71AEE19400005E645 /* main.m */; };
 		A8900ADB1AEE19400005E645 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900ADA1AEE19400005E645 /* AppDelegate.m */; };
 		A8900ADE1AEE19400005E645 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900ADD1AEE19400005E645 /* ViewController.m */; };
 		A8900AE31AEE19400005E645 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8900AE21AEE19400005E645 /* Images.xcassets */; };
 		A8900AE61AEE19400005E645 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8900AE41AEE19400005E645 /* LaunchScreen.xib */; };
 		A8900AF21AEE19400005E645 /* STWebViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900AF11AEE19400005E645 /* STWebViewControllerTests.m */; };
-		A8900B201AEE198B0005E645 /* SVWebViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8900AFC1AEE198B0005E645 /* SVWebViewController.strings */; };
 		A8900B211AEE198B0005E645 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900B061AEE198B0005E645 /* NJKWebViewProgress.m */; };
 		A8900B221AEE198B0005E645 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900B081AEE198B0005E645 /* NJKWebViewProgressView.m */; };
-		A8900B231AEE198B0005E645 /* SVModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900B0B1AEE198B0005E645 /* SVModalWebViewController.m */; };
-		A8900B241AEE198B0005E645 /* SVWebViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A8900B0C1AEE198B0005E645 /* SVWebViewController.bundle */; };
-		A8900B251AEE198B0005E645 /* SVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900B0E1AEE198B0005E645 /* SVWebViewController.m */; };
-		A8900B261AEE198B0005E645 /* SVWebViewControllerActivityChrome-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = A8900B111AEE198B0005E645 /* SVWebViewControllerActivityChrome-iPad.png */; };
-		A8900B271AEE198B0005E645 /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8900B121AEE198B0005E645 /* SVWebViewControllerActivityChrome-iPad@2x.png */; };
-		A8900B281AEE198B0005E645 /* SVWebViewControllerActivityChrome.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900B141AEE198B0005E645 /* SVWebViewControllerActivityChrome.m */; };
-		A8900B291AEE198B0005E645 /* SVWebViewControllerActivityChrome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8900B151AEE198B0005E645 /* SVWebViewControllerActivityChrome@2x.png */; };
-		A8900B2A1AEE198B0005E645 /* SVWebViewControllerActivitySafari-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = A8900B171AEE198B0005E645 /* SVWebViewControllerActivitySafari-iPad.png */; };
-		A8900B2B1AEE198B0005E645 /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8900B181AEE198B0005E645 /* SVWebViewControllerActivitySafari-iPad@2x.png */; };
-		A8900B2C1AEE198B0005E645 /* SVWebViewControllerActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900B1A1AEE198B0005E645 /* SVWebViewControllerActivitySafari.m */; };
-		A8900B2D1AEE198B0005E645 /* SVWebViewControllerActivitySafari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8900B1B1AEE198B0005E645 /* SVWebViewControllerActivitySafari@2x.png */; };
-		A8900B2E1AEE198B0005E645 /* SVWebViewControllerActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900B1D1AEE198B0005E645 /* SVWebViewControllerActivity.m */; };
+		A8900B251AEE198B0005E645 /* STWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8900B0E1AEE198B0005E645 /* STWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,21 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A83488A71B0096E3006BCC7E /* MyURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyURLCache.h; sourceTree = "<group>"; };
-		A83488A81B0096E3006BCC7E /* MyURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyURLCache.m; sourceTree = "<group>"; };
 		A83488AC1B009D12006BCC7E /* STTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTools.h; sourceTree = "<group>"; };
 		A83488AD1B009D12006BCC7E /* STTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTools.m; sourceTree = "<group>"; };
-		A85B423A1B05BAE000027DD4 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		A85B423B1B05BAE000027DD4 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		A85B423F1B05BE8500027DD4 /* FVCustomAlertView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FVCustomAlertView-Prefix.pch"; sourceTree = "<group>"; };
-		A85B42401B05BE8500027DD4 /* FVCustomAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FVCustomAlertView.h; sourceTree = "<group>"; };
-		A85B42411B05BE8500027DD4 /* FVCustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FVCustomAlertView.m; sourceTree = "<group>"; };
-		A85B42441B05BEB600027DD4 /* STAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAlertView.h; sourceTree = "<group>"; };
-		A85B42451B05BEB600027DD4 /* STAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAlertView.m; sourceTree = "<group>"; };
-		A85B42471B05D35700027DD4 /* PPWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPWebViewController.h; sourceTree = "<group>"; };
-		A85B42481B05D35700027DD4 /* PPWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPWebViewController.m; sourceTree = "<group>"; };
-		A85B424B1B05D96000027DD4 /* NSEtcHosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSEtcHosts.h; sourceTree = "<group>"; };
-		A85B424C1B05D96000027DD4 /* NSEtcHosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSEtcHosts.m; sourceTree = "<group>"; };
 		A8900AD21AEE19400005E645 /* STWebViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STWebViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8900AD61AEE19400005E645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8900AD71AEE19400005E645 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -75,37 +44,12 @@
 		A8900AEB1AEE19400005E645 /* STWebViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STWebViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8900AF01AEE19400005E645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8900AF11AEE19400005E645 /* STWebViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STWebViewControllerTests.m; sourceTree = "<group>"; };
-		A8900AFD1AEE198B0005E645 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
-		A8900AFE1AEE198B0005E645 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
-		A8900AFF1AEE198B0005E645 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
-		A8900B001AEE198B0005E645 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
-		A8900B011AEE198B0005E645 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
-		A8900B021AEE198B0005E645 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
-		A8900B031AEE198B0005E645 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
 		A8900B051AEE198B0005E645 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
 		A8900B061AEE198B0005E645 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
 		A8900B071AEE198B0005E645 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
 		A8900B081AEE198B0005E645 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
-		A8900B091AEE198B0005E645 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
-		A8900B0A1AEE198B0005E645 /* SVModalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVModalWebViewController.h; sourceTree = "<group>"; };
-		A8900B0B1AEE198B0005E645 /* SVModalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVModalWebViewController.m; sourceTree = "<group>"; };
-		A8900B0C1AEE198B0005E645 /* SVWebViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVWebViewController.bundle; sourceTree = "<group>"; };
-		A8900B0D1AEE198B0005E645 /* SVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewController.h; sourceTree = "<group>"; };
-		A8900B0E1AEE198B0005E645 /* SVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewController.m; sourceTree = "<group>"; };
-		A8900B111AEE198B0005E645 /* SVWebViewControllerActivityChrome-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivityChrome-iPad.png"; sourceTree = "<group>"; };
-		A8900B121AEE198B0005E645 /* SVWebViewControllerActivityChrome-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivityChrome-iPad@2x.png"; sourceTree = "<group>"; };
-		A8900B131AEE198B0005E645 /* SVWebViewControllerActivityChrome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewControllerActivityChrome.h; sourceTree = "<group>"; };
-		A8900B141AEE198B0005E645 /* SVWebViewControllerActivityChrome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewControllerActivityChrome.m; sourceTree = "<group>"; };
-		A8900B151AEE198B0005E645 /* SVWebViewControllerActivityChrome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivityChrome@2x.png"; sourceTree = "<group>"; };
-		A8900B171AEE198B0005E645 /* SVWebViewControllerActivitySafari-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivitySafari-iPad.png"; sourceTree = "<group>"; };
-		A8900B181AEE198B0005E645 /* SVWebViewControllerActivitySafari-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivitySafari-iPad@2x.png"; sourceTree = "<group>"; };
-		A8900B191AEE198B0005E645 /* SVWebViewControllerActivitySafari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewControllerActivitySafari.h; sourceTree = "<group>"; };
-		A8900B1A1AEE198B0005E645 /* SVWebViewControllerActivitySafari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewControllerActivitySafari.m; sourceTree = "<group>"; };
-		A8900B1B1AEE198B0005E645 /* SVWebViewControllerActivitySafari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivitySafari@2x.png"; sourceTree = "<group>"; };
-		A8900B1C1AEE198B0005E645 /* SVWebViewControllerActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewControllerActivity.h; sourceTree = "<group>"; };
-		A8900B1D1AEE198B0005E645 /* SVWebViewControllerActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewControllerActivity.m; sourceTree = "<group>"; };
-		A8900B1E1AEE198B0005E645 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
-		A8900B1F1AEE198B0005E645 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
+		A8900B0D1AEE198B0005E645 /* STWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWebViewController.h; sourceTree = "<group>"; };
+		A8900B0E1AEE198B0005E645 /* STWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,66 +70,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A83488A61B0096D0006BCC7E /* MyURLCache */ = {
-			isa = PBXGroup;
-			children = (
-				A83488A71B0096E3006BCC7E /* MyURLCache.h */,
-				A83488A81B0096E3006BCC7E /* MyURLCache.m */,
-			);
-			name = MyURLCache;
-			sourceTree = "<group>";
-		};
-		A83488AB1B009CFC006BCC7E /* tools */ = {
-			isa = PBXGroup;
-			children = (
-				A83488AC1B009D12006BCC7E /* STTools.h */,
-				A83488AD1B009D12006BCC7E /* STTools.m */,
-			);
-			name = tools;
-			path = source;
-			sourceTree = "<group>";
-		};
-		A85B423D1B05BB6900027DD4 /* PPEtcHosts */ = {
-			isa = PBXGroup;
-			children = (
-				A85B424A1B05D96000027DD4 /* Src */,
-				A85B423A1B05BAE000027DD4 /* TableViewController.h */,
-				A85B423B1B05BAE000027DD4 /* TableViewController.m */,
-				A85B42471B05D35700027DD4 /* PPWebViewController.h */,
-				A85B42481B05D35700027DD4 /* PPWebViewController.m */,
-			);
-			name = PPEtcHosts;
-			sourceTree = "<group>";
-		};
-		A85B423E1B05BE7500027DD4 /* thirdlib */ = {
-			isa = PBXGroup;
-			children = (
-				A85B42431B05BE8800027DD4 /* AlertView */,
-			);
-			name = thirdlib;
-			sourceTree = "<group>";
-		};
-		A85B42431B05BE8800027DD4 /* AlertView */ = {
-			isa = PBXGroup;
-			children = (
-				A85B423F1B05BE8500027DD4 /* FVCustomAlertView-Prefix.pch */,
-				A85B42401B05BE8500027DD4 /* FVCustomAlertView.h */,
-				A85B42411B05BE8500027DD4 /* FVCustomAlertView.m */,
-				A85B42441B05BEB600027DD4 /* STAlertView.h */,
-				A85B42451B05BEB600027DD4 /* STAlertView.m */,
-			);
-			name = AlertView;
-			sourceTree = "<group>";
-		};
-		A85B424A1B05D96000027DD4 /* Src */ = {
-			isa = PBXGroup;
-			children = (
-				A85B424B1B05D96000027DD4 /* NSEtcHosts.h */,
-				A85B424C1B05D96000027DD4 /* NSEtcHosts.m */,
-			);
-			path = Src;
-			sourceTree = "<group>";
-		};
 		A8900AC91AEE19400005E645 = {
 			isa = PBXGroup;
 			children = (
@@ -207,14 +91,11 @@
 		A8900AD41AEE19400005E645 /* STWebViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A83488AB1B009CFC006BCC7E /* tools */,
-				A85B423E1B05BE7500027DD4 /* thirdlib */,
 				A8900AFB1AEE198B0005E645 /* source */,
 				A8900AD91AEE19400005E645 /* AppDelegate.h */,
 				A8900ADA1AEE19400005E645 /* AppDelegate.m */,
 				A8900ADC1AEE19400005E645 /* ViewController.h */,
 				A8900ADD1AEE19400005E645 /* ViewController.m */,
-				A85B423D1B05BB6900027DD4 /* PPEtcHosts */,
 				A8900AE21AEE19400005E645 /* Images.xcassets */,
 				A8900AE41AEE19400005E645 /* LaunchScreen.xib */,
 				A8900AD51AEE19400005E645 /* Supporting Files */,
@@ -251,15 +132,11 @@
 		A8900AFB1AEE198B0005E645 /* source */ = {
 			isa = PBXGroup;
 			children = (
-				A83488A61B0096D0006BCC7E /* MyURLCache */,
-				A8900AFC1AEE198B0005E645 /* SVWebViewController.strings */,
 				A8900B041AEE198B0005E645 /* NJKWebViewProgress */,
-				A8900B0A1AEE198B0005E645 /* SVModalWebViewController.h */,
-				A8900B0B1AEE198B0005E645 /* SVModalWebViewController.m */,
-				A8900B0C1AEE198B0005E645 /* SVWebViewController.bundle */,
-				A8900B0D1AEE198B0005E645 /* SVWebViewController.h */,
-				A8900B0E1AEE198B0005E645 /* SVWebViewController.m */,
-				A8900B0F1AEE198B0005E645 /* UIActivities */,
+				A8900B0D1AEE198B0005E645 /* STWebViewController.h */,
+				A8900B0E1AEE198B0005E645 /* STWebViewController.m */,
+				A83488AC1B009D12006BCC7E /* STTools.h */,
+				A83488AD1B009D12006BCC7E /* STTools.m */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -273,41 +150,6 @@
 				A8900B081AEE198B0005E645 /* NJKWebViewProgressView.m */,
 			);
 			path = NJKWebViewProgress;
-			sourceTree = "<group>";
-		};
-		A8900B0F1AEE198B0005E645 /* UIActivities */ = {
-			isa = PBXGroup;
-			children = (
-				A8900B101AEE198B0005E645 /* Chrome */,
-				A8900B161AEE198B0005E645 /* Safari */,
-				A8900B1C1AEE198B0005E645 /* SVWebViewControllerActivity.h */,
-				A8900B1D1AEE198B0005E645 /* SVWebViewControllerActivity.m */,
-			);
-			path = UIActivities;
-			sourceTree = "<group>";
-		};
-		A8900B101AEE198B0005E645 /* Chrome */ = {
-			isa = PBXGroup;
-			children = (
-				A8900B111AEE198B0005E645 /* SVWebViewControllerActivityChrome-iPad.png */,
-				A8900B121AEE198B0005E645 /* SVWebViewControllerActivityChrome-iPad@2x.png */,
-				A8900B131AEE198B0005E645 /* SVWebViewControllerActivityChrome.h */,
-				A8900B141AEE198B0005E645 /* SVWebViewControllerActivityChrome.m */,
-				A8900B151AEE198B0005E645 /* SVWebViewControllerActivityChrome@2x.png */,
-			);
-			path = Chrome;
-			sourceTree = "<group>";
-		};
-		A8900B161AEE198B0005E645 /* Safari */ = {
-			isa = PBXGroup;
-			children = (
-				A8900B171AEE198B0005E645 /* SVWebViewControllerActivitySafari-iPad.png */,
-				A8900B181AEE198B0005E645 /* SVWebViewControllerActivitySafari-iPad@2x.png */,
-				A8900B191AEE198B0005E645 /* SVWebViewControllerActivitySafari.h */,
-				A8900B1A1AEE198B0005E645 /* SVWebViewControllerActivitySafari.m */,
-				A8900B1B1AEE198B0005E645 /* SVWebViewControllerActivitySafari@2x.png */,
-			);
-			path = Safari;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,7 +201,7 @@
 				TargetAttributes = {
 					A8900AD11AEE19400005E645 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 349485F24W;
+						DevelopmentTeam = J2J8D4JUXD;
 					};
 					A8900AEA1AEE19400005E645 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -400,16 +242,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8900B201AEE198B0005E645 /* SVWebViewController.strings in Resources */,
 				A8900AE61AEE19400005E645 /* LaunchScreen.xib in Resources */,
-				A8900B261AEE198B0005E645 /* SVWebViewControllerActivityChrome-iPad.png in Resources */,
-				A8900B2B1AEE198B0005E645 /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
-				A8900B2D1AEE198B0005E645 /* SVWebViewControllerActivitySafari@2x.png in Resources */,
-				A8900B271AEE198B0005E645 /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */,
-				A8900B241AEE198B0005E645 /* SVWebViewController.bundle in Resources */,
-				A8900B291AEE198B0005E645 /* SVWebViewControllerActivityChrome@2x.png in Resources */,
 				A8900AE31AEE19400005E645 /* Images.xcassets in Resources */,
-				A8900B2A1AEE198B0005E645 /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,19 +265,9 @@
 				A8900B211AEE198B0005E645 /* NJKWebViewProgress.m in Sources */,
 				A8900B221AEE198B0005E645 /* NJKWebViewProgressView.m in Sources */,
 				A8900ADE1AEE19400005E645 /* ViewController.m in Sources */,
-				A85B42461B05BEB600027DD4 /* STAlertView.m in Sources */,
-				A85B42421B05BE8500027DD4 /* FVCustomAlertView.m in Sources */,
-				A83488A91B0096E3006BCC7E /* MyURLCache.m in Sources */,
 				A8900ADB1AEE19400005E645 /* AppDelegate.m in Sources */,
-				A8900B231AEE198B0005E645 /* SVModalWebViewController.m in Sources */,
-				A85B423C1B05BAE000027DD4 /* TableViewController.m in Sources */,
-				A8900B2E1AEE198B0005E645 /* SVWebViewControllerActivity.m in Sources */,
-				A85B424D1B05D96000027DD4 /* NSEtcHosts.m in Sources */,
 				A8900AD81AEE19400005E645 /* main.m in Sources */,
-				A8900B251AEE198B0005E645 /* SVWebViewController.m in Sources */,
-				A85B42491B05D35700027DD4 /* PPWebViewController.m in Sources */,
-				A8900B281AEE198B0005E645 /* SVWebViewControllerActivityChrome.m in Sources */,
-				A8900B2C1AEE198B0005E645 /* SVWebViewControllerActivitySafari.m in Sources */,
+				A8900B251AEE198B0005E645 /* STWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,23 +296,6 @@
 				A8900AE51AEE19400005E645 /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		A8900AFC1AEE198B0005E645 /* SVWebViewController.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8900AFD1AEE198B0005E645 /* da */,
-				A8900AFE1AEE198B0005E645 /* de */,
-				A8900AFF1AEE198B0005E645 /* en */,
-				A8900B001AEE198B0005E645 /* es-ES */,
-				A8900B011AEE198B0005E645 /* es */,
-				A8900B021AEE198B0005E645 /* fr */,
-				A8900B031AEE198B0005E645 /* ja */,
-				A8900B091AEE198B0005E645 /* pt */,
-				A8900B1E1AEE198B0005E645 /* zh-Hans */,
-				A8900B1F1AEE198B0005E645 /* zh-Hant */,
-			);
-			name = SVWebViewController.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -578,6 +385,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = STWebViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sg.bigo.live.lrl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -591,6 +399,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = STWebViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sg.bigo.live.lrl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

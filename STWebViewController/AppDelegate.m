@@ -9,8 +9,6 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 
-#import "TableViewController.h"
-
 @interface AppDelegate ()
 
 @end
@@ -24,7 +22,6 @@
     [self.window makeKeyAndVisible];
     
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[[ViewController alloc] init]];
-//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[[TableViewController alloc] init]];
     self.window.rootViewController = nav;
     
     return YES;
