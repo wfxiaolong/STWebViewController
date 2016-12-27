@@ -10,8 +10,6 @@
 #import "STWebViewController.h"
 
 #define URLSTRING @"https://www.jd.com/"
-//#define URLSTRING @"https://www.baidu.com"
-
 
 @interface ViewController ()
 
